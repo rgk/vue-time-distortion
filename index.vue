@@ -6,13 +6,13 @@ defineProps({
   style: Number
 });
 
-let time = ref(Date.now());
+let time = ref(new Date().format(format));
 
 let intervalId;
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    time.value = Date.now();
+    time.value = new Date().format(format);
   }, 1000);
 });
 
