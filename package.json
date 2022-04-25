@@ -1,0 +1,17 @@
+{
+  "name": "VTD",
+  "version": "1.0.0",
+  "description": "Vue Time Distortion Effect",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rgk/vue-time-distortion.git"
+  },
+  "author": "rgk",
+  "homepage": "https://github.com/rgk/vue-time-distortion",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "vue": "^3.2.33"
+  }
+}
