@@ -7,12 +7,18 @@ const props = defineProps({
 });
 
 let time = ref(new Date().format(format));
+let hour = time.value.getHours();
+let min = time.value.getMinutes();
+let seconds = time.value.getSeconds();
 
 let intervalId;
 
 onMounted(() => {
   intervalId = setInterval(() => {
     time.value = new Date().format(format);
+    hour = time.value.getHours();
+    min = time.value.getMinutes();
+    seconds = time.value.getSeconds();
   }, 1000);
 });
 
