@@ -1,7 +1,7 @@
 <script setup>
 import { ref, defineProps, onMounted, onUnmounted } from 'vue';
 
-defineProps({
+const props = defineProps({
   format: String,
   style: Number
 });
@@ -20,6 +20,5 @@ onUnmounted(() => clearInterval(intervalId));
 </script>
 
 <template>
-  {{ time }}
-  <slot></slot>
+  <div>{{ time }}</div>
 </template>
