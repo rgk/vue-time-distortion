@@ -6,7 +6,7 @@ const props = defineProps({
   style: Number
 });
 
-let time = ref(new Date().format(format));
+let time = ref(new Date().format(props.format));
 let hour = time.value.getHours();
 let min = time.value.getMinutes();
 let seconds = time.value.getSeconds();
