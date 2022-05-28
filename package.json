@@ -2,7 +2,7 @@
   "name": "VTD",
   "version": "1.0.0",
   "description": "Vue Time Distortion Effect",
-  "main": "index.js",
+  "main": "index.vue",
   "type": "module",
   "repository": {
     "type": "git",
