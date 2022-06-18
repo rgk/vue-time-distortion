@@ -6,7 +6,17 @@ const props = defineProps({
   style: Number
 });
 
-let time = ref(new Date().format(props.format));
+const props = defineProps({
+  locale: {
+    type: String,
+    default: 'en-US'
+  },
+  style: {
+    type: Number,
+    default: 0
+});
+
+let time = ref(new Date().toLocaleString(props.locale));
 let hour = time.value.getHours();
 let min = time.value.getMinutes();
 let seconds = time.value.getSeconds();
@@ -15,7 +25,7 @@ let intervalId;
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    time.value = new Date().format(format);
+    time.value = new Date().toLocaleString(props.locale);
     hour = time.value.getHours();
     min = time.value.getMinutes();
     seconds = time.value.getSeconds();
@@ -28,3 +38,6 @@ onUnmounted(() => clearInterval(intervalId));
 <template>
   <div>{{ time }}</div>
 </template>
+
+<style scoped>
+</style>
