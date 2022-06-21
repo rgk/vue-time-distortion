@@ -2,11 +2,6 @@
 import { ref, defineProps, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps({
-  format: String,
-  style: Number
-});
-
-const props = defineProps({
   locale: {
     type: String,
     default: 'en-US'
@@ -14,7 +9,8 @@ const props = defineProps({
   style: {
     type: Number,
     default: 0
-});
+  }
+);
 
 let time = ref(new Date().toLocaleString(props.locale));
 let hour = time.value.getHours();
