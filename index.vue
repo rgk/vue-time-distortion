@@ -13,18 +13,18 @@ const props = defineProps({
 );
 
 let time = ref(new Date().toLocaleString(props.locale));
-let hour = time.value.getHours();
-let min = time.value.getMinutes();
-let seconds = time.value.getSeconds();
+let hours = ref(time.value.getHours());
+let minutes = ref(time.value.getMinutes());
+let seconds = ref(time.value.getSeconds());
 
 let intervalId;
 
 onMounted(() => {
   intervalId = setInterval(() => {
     time.value = new Date().toLocaleString(props.locale);
-    hour = time.value.getHours();
-    min = time.value.getMinutes();
-    seconds = time.value.getSeconds();
+    hours.value = time.value.getHours();
+    minutes.value = time.value.getMinutes();
+    seconds.value = time.value.getSeconds();
   }, 1000);
 });
 
