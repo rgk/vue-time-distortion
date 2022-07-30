@@ -12,10 +12,10 @@ const props = defineProps({
     type: Number,
     default: 0
   }
-);
+});
 
-let draw = SVG().addTo('body').size(250, 250)
-let rect = draw.rect(100, 100).attr({ fill: '#cccccc' })
+let draw = SVG().addTo('body').size(250, 250);
+let rect = draw.rect(100, 100).attr({ fill: '#cccccc' });
 
 let time = ref(new Date().toLocaleString(props.locale));
 let hours = ref(time.value.getHours());
