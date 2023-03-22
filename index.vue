@@ -22,15 +22,17 @@ let hours = ref(time.value.getHours());
 let minutes = ref(time.value.getMinutes());
 let seconds = ref(time.value.getSeconds());
 
+const intervalFunc = () => {
+  time.value = new Date().toLocaleString(props.locale);
+  hours.value = time.value.getHours();
+  minutes.value = time.value.getMinutes();
+  seconds.value = time.value.getSeconds();
+}
+
 let intervalId;
 
 onMounted(() => {
-  intervalId = setInterval(() => {
-    time.value = new Date().toLocaleString(props.locale);
-    hours.value = time.value.getHours();
-    minutes.value = time.value.getMinutes();
-    seconds.value = time.value.getSeconds();
-  }, 1000);
+  intervalId = setInterval(intervalFunc, 1000);
 });
 
 onUnmounted(() => clearInterval(intervalId));
