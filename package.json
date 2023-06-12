@@ -12,7 +12,7 @@
   "homepage": "https://github.com/rgk/vue-time-distortion",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "vue": "^3.2.47",
+    "vue": "^3.3.4",
     "@svgdotjs/svg.js": "^3.1.2"
   }
 }
